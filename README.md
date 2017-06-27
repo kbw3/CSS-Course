@@ -1,2 +1,2 @@
 # CSS-Course
-This is a repo for people who wants to learn with me the basics of css.
+Este es un repositorio para las personas que quieran aprende lo básico (y en un futuro no tan básico) de CSS.
