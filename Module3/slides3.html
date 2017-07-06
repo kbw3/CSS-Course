@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Layout Básico</title>
+    <style media="screen">
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      body,html{
+        height: 100%;
+      }
+      .menu{
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        color: white;
+      }
+      .contenedor-principal{
+        display: flex;
+        height: calc(100% - 50px);
+      }
+      .barra-izquierda, .barra-derecha, .contenido{
+        width: 20%;
+        height: 100%;
+        display: inline-block;
+        background-color: lightblue;
+      }
+      .contenido{
+        width: 60%;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">Aquí irá el menú</div>
+    <div class="contenedor-principal">
+      <div class="barra-izquierda">Esta es la barra izquierda</div>
+      <div class="contenido">Este es el contenido principal</div>
+      <div class="barra-derecha">Esta es la barra derecha</div>
+    </div>
+  </body>
+</html>

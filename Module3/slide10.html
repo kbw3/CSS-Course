@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slide 10</title>
+    <style media="screen">
+      /*Para responder las preguntas de la
+        diapositiva 10 primero veremos
+        cómo lo vamos a solucionar y al final
+        revisaremos el porque.
+        (NOTA. Actualizar el navegador con cada paso realizado)
+        1.- Lo primero que haremos es especificar
+        la altura de nuestra barra izquierda, la
+        cual deberá ser igual al tamaño de la ventana
+        dicho esto, podemos deducir, que al igual que
+        con el ancho, vamos a especificar el alto en %,
+        quedando con una altura del 100%.
+        (Refrescar el navegador.)
+        2.- Si hicimos todo bien, veremos que el resultado no
+        cambia, pero está bien, lo siguiente que tenemos que
+        hacer es cambiar la altura de nuestro "body", por ahora
+        pongamosle un tamaño de 200 pixeles.
+        (Refrescar el navegador.)
+        3.- Ahora podemos ver que la altura de nuestra barra
+        izquierda se ha incrementado, pero tambien recordemos
+        que no queremos que tenga un alto fijo, sino que se
+        adecue al tamaño de nuestra ventada, por lo cual, vamos
+        a cambiar su valor una vez más, ahora al 100%.
+        (Refrescar el navegador.)
+        4.- Pero... volvio a estar como antes!!, ¿a qué se
+        deberá?. Pues bien, esto es porque hay otro elemento
+        que envuelve a nuestro "body" y ese elemento no es otro
+        que nuestro "html", por lo tanto vamos a cambiarle el
+        tamaño para que sea un 100%.
+        (Refrescar el navegador.)
+        5.- Listo!!!, al fin nuestra barra se ve del tamaño de la
+        ventana. Pero, espera un momento, ¿por qué el 100% funcionó
+        con el "html" y no con el "body"? La respuesta es bastante
+        sencilla, simplemente porque el contenedor de nuestro "html"
+        es la misma ventana. Mientras que el contenedor de nuestro
+        "body" es el html.
+        Una vez resuelta esta duda, y si somos observadores, nos
+        daremos cuenta que tenemos un error, y ese es, que nuestra
+        página, tiene un alto mayor a nuestra ventana.
+        Para encontrar la razón utilicen las herramientas de
+        desarrollador de su navegador y vayan hasta nuestra barra
+        izquierda. Recordemos que nuestra barra tiene una altura del 100%,
+        lo cual no es del todo correcto, ya que tenemos una "cabecera"
+        que abarca 50 pixeles, del 100% de la altura de nuestra ventana,
+        por esto la altura correcta de nuestra barra izquierda es
+        100% - 50 pixeles, así que vamos a solucionarlo utilizando
+        la función "calc".
+        (Refrescar el navegador.)
+        Fin
+      */
+
+
+      /*Paso 4*/
+      html{
+        height: 100%;
+      }
+      /*Paso 4 FIN*/
+      body{
+        margin: 0px;
+        height: 200px; /*Paso 2*/
+        height: 100%; /*Paso 3*/
+      }
+      .cabecera{
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+      }
+      .barra-izq{
+        width: 20%;
+        color: #000;
+        background-color: lightblue;
+        height: 100%; /*Paso 1*/
+        height: calc(100% - 50px); /*Paso 5*/
+      }
+      .barra-der{}
+      .contenido-principal{}
+    </style>
+  </head>
+  <body>
+    <div class="cabecera">Esta es la cabecera de nuestro layout</div>
+    <div class="barra-izq">Esta es la barra izquierda</div>
+    <div class="contenido-principal"></div>
+    <div class="barra-der"></div>
+  </body>
+</html>

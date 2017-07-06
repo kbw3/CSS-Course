@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slide 11</title>
+    <style media="screen">
+      /*Notas:
+        Para este ejercicio, vamos a separar el código con comentarios
+        dividiendo por pasos para que sea más fácil de entender.
+      */
+      /*Paso 1*/
+      html{
+        height: 100%;
+      }
+      body{
+        margin: 0px;
+        height: 200px;
+        height: 100%;
+      }
+      .cabecera{
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+      }
+      .barra-izq{
+        width: 20%;
+        color: #000;
+        background-color: lightblue;
+        /*height: 100%;  Esta linea se comenta por ser ahora inútil*/
+        height: calc(100% - 50px);
+      }
+      .barra-der{}
+      .contenido-principal{
+        height: calc(100% - 50px); /*Asignamos la altura*/
+        width: 60%; /*Asignamos el ancho*/
+        background-color: lightgray; /*Asignamos el fondo*/
+      }
+      /*Refrescar navegador*/
+      /*Paso 2*/
+      /*Si hicimos todo bien, veremos como nuestro contenido-principal tiene
+        los estilos que queremos. Pero tiene un pequeño problema, y es que
+        se muestra debajo de nuestra barra izquierda, cuando se debiera mostrar
+        a un lado. Para solucionar esto, nos aprovecharemos de la propiedad "display"
+        como se muestra ahora
+      */
+      .barra-izq{
+        display: inline-block;
+      }
+      .contenido-principal{
+        display: inline-block;
+      }
+      /*Refrescar navegador*/
+      /*Paso 3*/
+      /*Si bien ahora si se ven uno enseguida del otro, también podemos observar que
+      existe una pequeña separación entre nuestros elementos que nosotros no hemos colocado
+      este es un problema común y existen multiples soluciones para esto cada una con sus
+      pros y sus contras, por ahora utilizaremos un margen en nuestro contenido-principal.
+      Si quieres leer de otras posibles soluciones, te recomiendo visitar el siguiente
+      enlace: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+      */
+      .contenido-principal{
+        margin-left: -4px; /*Este margen es la separación.*/
+      }
+      /*Refrescar navegador*/
+      /*Fin*/
+
+    </style>
+  </head>
+  <body>
+    <div class="cabecera">Esta es la cabecera de nuestro layout</div>
+    <div class="barra-izq">Esta es la barra izquierda</div>
+    <!-- Agregamos texto para que sea más facil identificar -->
+    <div class="contenido-principal">Este es el contenido principal</div>
+    <div class="barra-der"></div>
+  </body>
+</html>
