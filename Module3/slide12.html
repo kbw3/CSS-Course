@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slide 12</title>
+    <style media="screen">
+
+      html{
+        height: 100%;
+      }
+      body{
+        margin: 0px;
+        height: 200px;
+        height: 100%;
+      }
+      .cabecera{
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+      }
+      .barra-izq{
+        width: 20%;
+        color: #000;
+        background-color: lightblue;
+        height: calc(100% - 50px);
+        display: inline-block;
+
+      }
+      /*Actualizamos copiando el contenido de la clase barra-izq*/
+      .barra-der{
+        width: 20%;
+        color: #000;
+        background-color: lightblue;
+        height: calc(100% - 50px);
+        display: inline-block;
+      }
+      .contenido-principal{
+        height: calc(100% - 50px);
+        width: 60%;
+        background-color: lightgray;
+        display: inline-block;
+        margin-left: -4px; /*Este es para la barra izquierda*/
+        margin-right: -4px; /*Este es para la barra derecha*/
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="cabecera">Esta es la cabecera de nuestro layout</div>
+    <div class="barra-izq">Esta es la barra izquierda</div>
+    <div class="contenido-principal">Este es el contenido principal</div>
+    <!-- Agregamos texto para que sea más facil identificar -->
+    <div class="barra-der">Esta es la barra derecha</div>
+  </body>
+</html>
