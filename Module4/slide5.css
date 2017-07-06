@@ -1,0 +1,34 @@
+html{
+  height: 100%;
+}
+body{
+  margin: 0px;
+  height: 200px;
+  height: 100%;
+}
+.cabecera{
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+}
+.contenido-principal,
+.barra-izq,
+.barra-der{
+  vertical-align: top;
+}
+.barra-izq,
+.barra-der{
+  width: 20%;
+  color: #000;
+  background-color: lightblue;
+  height: calc(100% - 50px);
+  display: inline-block;
+}
+.contenido-principal{
+  height: calc(100% - 50px);
+  width: 60%;
+  background-color: lightgray;
+  display: inline-block;
+  margin:0px -4px;
+}

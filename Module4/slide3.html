@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slide 3</title>
+    <style media="screen">
+
+      html{
+        height: 100%;
+      }
+      body{
+        margin: 0px;
+        height: 200px;
+        height: 100%;
+      }
+      .cabecera{
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+      }
+      /*La propiedad "vertical-align" se repite en 3 clases
+        así que vamos a definirlas juntas
+      */
+      .contenido-principal,
+      .barra-izq,
+      .barra-der{
+        vertical-align: top;
+        height: calc(100% - 50px);
+      }
+      /*En lugar de tener las barras por separado las uniremos*/
+      .barra-izq,
+      .barra-der{
+        width: 20%;
+        color: #000;
+        background-color: lightblue;
+        /*height: calc(100% - 50px); movida a la parte superior*/
+        display: inline-block;
+        /*vertical-align: top; movida a la parte superior*/
+      }
+
+      /*.barra-der{
+        width: 20%;
+        color: #000;
+        background-color: lightblue;
+        height: calc(100% - 50px);
+        display: inline-block;*/
+        /*vertical-align: top; movida a la parte superior*/
+      /*}*/
+      .contenido-principal{
+        /*height: calc(100% - 50px); movida a la parte superior*/
+        width: 60%;
+        background-color: lightgray;
+        display: inline-block;
+        /*margin-left: -4px;
+        margin-right: -4px; Se reemplazan con la siguiente linea*/
+        margin: 0px -4px;
+        /*vertical-align: top; movida a la parte superior*/
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="cabecera">Esta es la cabecera de nuestro layout</nav>
+    <aside class="barra-izq">Esta es la barra izquierda</aside>
+    <main class="contenido-principal">Este es el contenido principal</main>
+    <aside class="barra-der">Esta es la barra derecha</aside>
+  </body>
+</html>
